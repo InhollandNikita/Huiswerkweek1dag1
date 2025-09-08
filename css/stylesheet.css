@@ -1,21 +1,156 @@
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
 }
 
-h1 {
-    color: darkblue;
+/* Navigation Styling */
+nav {
+    background-color: #343a40;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-h2 {
-    color: red;
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
 }
 
-a {
-    color: #0066cc;
+nav li {
+    margin: 0;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #495057;
     text-decoration: none;
 }
 
+/* Main Layout */
+main {
+    display: flex;
+    max-width: 1200px;
+    margin: 2rem auto;
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+/* Article Styling */
+article {
+    flex: 2;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+article h1 {
+    color: darkblue;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid #007bff;
+    padding-bottom: 0.5rem;
+}
+
+article p {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* Figure Styling */
+figure {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+figcaption {
+    margin-top: 0.5rem;
+    font-style: italic;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Aside Styling */
+aside {
+    flex: 1;
+    background-color: #e9ecef;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    height: fit-content;
+}
+
+aside h2 {
+    color: red;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+aside p {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* General Link Styling */
+a {
+    color: #0066cc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
 a:hover {
+    color: #004499;
     text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        margin: 1rem auto;
+        padding: 0 0.5rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+    
+    article, aside {
+        padding: 1.5rem;
+    }
 }
