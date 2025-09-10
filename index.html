@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/stylesheet.css" type="text/css">
     <title>Dag 1</title>
 </head>
 <body>
+    <header>
+        <h1>Huiswerkweek 1 Dag 1</h1>
+    </header>
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -16,23 +20,51 @@
     </nav>
 
     <main>
-        <article>
-            <h1>Huiswerkweek 1 Dag 1</h1>
-            <figure>
-                <img src="https://placehold.co/400" alt="Sample Image">
-                <figcaption>This is a sample figure with a caption demonstrating the layout.</figcaption>
-            </figure>
-            <p>Welcome to the first day of homework week! This article contains the main content of the page with a figure included.</p>
-            <p>You can add more paragraphs and content here as needed for your assignment.</p>
-        </article>
-        <aside>
-            <h2>Sidebar</h2>
-            <p>This is a sidebar with additional information.</p>
-            <p>You can add links, additional content, or navigation elements here.</p>
-        </aside>
+        <section>
+            <article>
+                <h2>Article Title</h2>
+                <figure>
+                    <img src="https://placehold.co/400" alt="Sample Image">
+                    <figcaption>This is a sample figure with a caption demonstrating the layout.</figcaption>
+                </figure>
+                <p>Welcome to the <em>first day</em> of homework week! This article contains the <mark>main content</mark> of the page with a figure included.</p>
+                <p>You can add more paragraphs and content here as needed for your assignment.</p>
+            </article>
+            <aside>
+                <h2>Sidebar</h2>
+                <p>This is a sidebar with additional information.</p>
+                <details>
+                    <summary>More Info</summary>
+                    <p>This is some extra information hidden by default.</p>
+                </details>
+                <p>You can add links, additional content, or navigation elements here.</p>
+            </aside>
+        </section>
+        <section>
+            <h2>Contact Us</h2>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Your Information</legend>
+                    <p>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name">
+                    </p>
+                    <p>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email">
+                    </p>
+                    <p>
+                        <input type="submit" value="Submit">
+                    </p>
+                </fieldset>
+            </form>
+        </section>
     </main>
     <footer>
-        <p>&copy; 2024 Inholland</p>
+        <address>
+            Contact: <a href="mailto:info@inholland.nl">info@inholland.nl</a>
+        </address>
+        <p>&copy; <time datetime="2024">2024</time> Inholland</p>
     </footer>
 </body>
 </html>

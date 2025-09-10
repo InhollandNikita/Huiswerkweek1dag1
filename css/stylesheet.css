@@ -6,6 +6,16 @@ body {
     background-color: #f8f9fa;
 }
 
+/* Header */
+header {
+    max-width: 1200px;
+    margin: 1.5rem auto 0;
+    padding: 0 1rem;
+}
+header h1 {
+    margin: 0;
+}
+
 /* Navigation Styling */
 nav {
     background-color: #343a40;
@@ -48,6 +58,18 @@ main {
     padding: 0 1rem;
 }
 
+/* Sections layout: first section holds article + aside */
+main > section:first-of-type {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    width: 100%;
+}
+
+h2 {
+    margin-top: 0;
+}
+
 /* Article Styling */
 article {
     flex: 2;
@@ -62,6 +84,11 @@ article h1 {
     margin-bottom: 1.5rem;
     border-bottom: 3px solid #007bff;
     padding-bottom: 0.5rem;
+}
+
+article h2 {
+    color: #0d6efd;
+    margin-bottom: 0.75rem;
 }
 
 article p {
@@ -110,6 +137,16 @@ aside p {
     font-size: 0.95rem;
 }
 
+/* Collapsible details in aside */
+aside details {
+    margin: 1rem 0;
+}
+
+aside summary {
+    cursor: pointer;
+    font-weight: 600;
+}
+
 /* Footer Styling */
 footer {
     background-color: #222;
@@ -124,6 +161,15 @@ footer p {
     font-size: 0.9rem;
 }
 
+footer address {
+    font-style: normal;
+    margin-bottom: 0.5rem;
+}
+
+footer time {
+    font-variant-numeric: tabular-nums;
+}
+
 /* General Link Styling */
 a {
     color: #0066cc;
@@ -136,12 +182,66 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Highlighted text */
+mark {
+    background: #fff3cd;
+    padding: 0 0.2em;
+}
+
+/* Forms */
+form {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+fieldset {
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+}
+
+legend {
+    padding: 0 0.5rem;
+    font-weight: 600;
+    color: #0d6efd;
+}
+
+label {
+    display: inline-block;
+    min-width: 90px;
+}
+
+input[type="text"],
+input[type="email"] {
+    padding: 0.5rem 0.6rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background: #0d6efd;
+    color: #fff;
+    border: none;
+    padding: 0.55rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background: #0b5ed7;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     main {
         flex-direction: column;
         margin: 1rem auto;
         padding: 0 0.5rem;
+    }
+    main > section:first-of-type {
+        display: block;
     }
     
     nav ul {
